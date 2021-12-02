@@ -1,0 +1,187 @@
+*,
+:after,
+:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --grey-1: #fafafa;
+  --grey-2: #8b8b8b;
+  --blue: #407bff;
+}
+
+body {
+  font-family: Montserrat;
+  font-size: 16px;
+  background: var(--grey-1);
+  line-height: 1.5;
+}
+
+.website-header {
+  display: flex;
+  align-items: center;
+  max-width: 1080px;
+  margin: auto;
+  padding: 60px 20px 0 20px;
+  gap: 60px;
+}
+
+.website-header > * {
+  width: 50%;
+}
+
+.website-header img  {
+  display: block;
+  max-width: 100%;
+  margin: auto;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+p {
+  color: var(--grey-2);
+}
+
+h1:after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  margin: 15px 0 30px 0;
+  background: var(--blue);
+}
+
+.buttons {
+  display: flex;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.button-blue,
+.button-grey {
+  padding: 10px 30px;
+  color: var(--white);
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50px;
+}
+
+.button-blue {
+  background: var(--blue);
+}
+
+.button-grey {
+  background: var(--grey-2);
+}
+
+.services {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 1080px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+.services.reverse .icons {
+  order: 1;
+}
+
+.services-description {
+  max-width: 430px;
+}
+
+.icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.icons div {
+  background: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px #407bff1f;
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.icons img {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 950px) {
+  .website-header {
+    flex-wrap: wrap;
+  }
+
+  .website-header > * {
+    width: 100%;
+  }
+
+  .website-header article {
+    order: 1;
+    text-align: center;
+  }
+    
+  h1:after {
+    margin: 15px auto 30px auto;
+  }
+
+  .website-header p {
+    max-width: 550px;
+    margin: auto;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .services {
+    flex-wrap: wrap;
+  }
+  
+  .services-description {
+    max-width: 550px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .icons {
+    order: 1;
+  }
+}
+
+@media (max-width: 750px) {
+  .buttons {
+    flex-wrap: wrap;
+  }
+
+  .icons {
+    grid-template-columns: 1fr;
+  }
+  
+  .icons div {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .icons img {
+    margin: 0 20px 0 0;
+  }
+}
